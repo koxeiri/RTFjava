@@ -63,17 +63,17 @@ public class Main {
         NumberAxis rangeAxis = (NumberAxis) plot.getRangeAxis();
         rangeAxis.setNumberFormatOverride(NumberFormat.getIntegerInstance());
         ChartUtils.saveChartAsPNG(new File("graphic.png"), chart, 1920, 1080);
-        System.out.println("Гистрограмма построена !");
+        System.out.println("1. Гистограмма построена");
     }
 
     // Для вывода среднего кол-ва объектов в регионах
     private static void displayCountAvg() throws SQLException {
-        System.out.println("Среднее кол-во объектов спорта в регионах: " + dataBase.getCountAvg());
+        System.out.println("2. Среднее кол-во объектов спорта в регионах: " + dataBase.getCountAvg());
     }
 
     // Для вывода топ-3 регионов по кол-ву спортивных объектов
     private static void displayCountObj() throws SQLException {
-        System.out.println("Топ-3 региона с наибольшим количеством спортивных объектов: ");
+        System.out.println("3. Топ-3 региона с наибольшим количеством спортивных объектов: ");
         System.out.println(String.join(", ", dataBase.getCountObj()));
     }
 }
